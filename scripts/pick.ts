@@ -7,7 +7,7 @@ import type { Reel } from '../src/types'
 
 export const ROOT = resolve(import.meta.dirname, '..')
 export const python = () => [process.env.PYTHON, join(ROOT, '.venv/bin/python')].find(p => p && existsSync(p)) ?? 'python3'
-export interface Source { id: string, url: string, title: string, credit: string, license: string, file: string }
+export interface Source { id: string, url: string, title: string, credit: string, creditUrl?: string, license: string, file: string }
 export interface Entry { date: string, status: string, source: string, start: number, length: number, facts: string[], mode: string }
 
 const core = (f: string) => f.replace(/^(Fun fact:|Also,)\s*/i, '')
@@ -30,7 +30,11 @@ export function pick(date: string) {
   const history = json<Entry[]>('data/history.json').filter(h => h.status !== 'test')
   const seed = [...date].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7)
   const uses = (id: string) => history.filter(h => h.source === id).length
-  const source = [...sources].sort((a, b) => uses(a.id) - uses(b.id))[0]
+  const video = (s: Source) => s.url || s.id
+  const videoUses = (s: Source) => history.filter(h => sources.find(x => x.id === h.source && video(x) === video(s))).length
+  const mixed = (s: Source) => [...s.id].reduce((a, c) => (a * 33 + c.charCodeAt(0) + seed) >>> 0, 5381)
+  // Rotate between videos first, then between the parts of that video.
+  const source = [...sources].sort((a, b) => videoUses(a) - videoUses(b) || uses(a.id) - uses(b.id) || mixed(a) - mixed(b))[0]
   const length = BRAND.clip.lengths[seed % BRAND.clip.lengths.length]
 
   const facts = json<string[]>('brand/facts.json')
@@ -58,7 +62,7 @@ export function pick(date: string) {
     clip: { start: found.start, length, mode: found.mode, seed },
     scenes: chosen.map((f, i) => ({ type: 'fact', voice: i ? `Also, ${core(f)}` : f })),
     post: {
-      caption: `${hook}\n\nVideo: ${source.credit}\n${BRAND.disclaimer}\n\n${BRAND.hashtags.join(' ')}`,
+      caption: `${hook}\n\nGameplay Credit: ${source.credit}${source.creditUrl ? ` (${source.creditUrl})` : ''}\n${BRAND.disclaimer}\n\n${BRAND.hashtags.join(' ')}`,
       youtubeTitle: `GTA 6 clip + did you know? ${hook}`.slice(0, 91) + ' #Shorts',
     },
   }

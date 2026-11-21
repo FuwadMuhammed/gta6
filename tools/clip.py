@@ -6,7 +6,7 @@
 A "highlight" is the window with the most sound energy and on-screen motion. When nothing stands out, it takes a
 random window instead, so a video can always be made.
 """
-import json, random, subprocess, sys
+import json, random, re, subprocess, sys
 import numpy as np
 
 STEP = 0.5
@@ -59,10 +59,21 @@ def find(video, length, avoid, seed):
     return {'start': round(pick * STEP, 2), 'mode': 'random', 'score': round(float(score[pick]), 3)}
 
 
+def bars(video, start, length):
+    """A crop that removes black bars baked into the footage, or '' when there are none."""
+    ih = int(subprocess.check_output(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=height', '-of', 'csv=p=0', video]).decode().split()[0])
+    r = subprocess.run(['ffmpeg', '-hide_banner', '-ss', str(start), '-t', str(length), '-i', video, '-an', '-vf', 'fps=2,cropdetect=limit=24:round=2:reset=1', '-f', 'null', '-'], capture_output=True, text=True)
+    hs = sorted(int(m) for m in re.findall(r'crop=\d+:(\d+):', r.stderr))
+    if not hs: return ''
+    h = hs[int(len(hs) * 0.8)]   # dark shots read as smaller, so trust the taller readings
+    if h >= ih * 0.97 or h < ih * 0.6: return ''
+    return f'crop=iw:{h}:0:{(ih - h) // 2},'
+
+
 def cut(video, start, length, out):
-    g = ('[0:v]fps=30,split[a][b];'
+    g = (f'[0:v]{bars(video, start, length)}fps=30,split[a][b];'
          '[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=28:2,eq=brightness=-0.22[bg];'
-         '[b]scale=1500:-2,crop=1080:ih[fg];[bg][fg]overlay=0:(H-h)/2-90,format=yuv420p[v]')
+         '[b]scale=-2:844,crop=1080:844[fg];[bg][fg]overlay=0:(H-h)/2-90,format=yuv420p[v]')
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(start), '-t', str(length), '-i', video, '-filter_complex', g, '-map', '[v]', '-map', '0:a?',
                     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '19', '-c:a', 'aac', '-ar', '48000', out], check=True)
 
