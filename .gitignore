@@ -1,0 +1,8 @@
+node_modules
+out
+.env
+.venv
+# per-run voice clips and timing (made by tools/voice.py)
+public/runs
+# downloaded source videos live in the "sources" GitHub release, not in git
+sources/

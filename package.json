@@ -1,0 +1,31 @@
+{
+  "name": "gta6",
+  "private": true,
+  "type": "module",
+  "description": "GTA 6 short clips with a fun-fact voiceover, captions and subtle music, posted through Buffer.",
+  "scripts": {
+    "studio": "remotion studio",
+    "voice": "python3 tools/voice.py",
+    "make": "tsx scripts/make.ts",
+    "typecheck": "tsc",
+    "add": "tsx scripts/add.ts",
+    "daily": "tsx scripts/daily.ts",
+    "post": "tsx scripts/post.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.540",
+    "@remotion/google-fonts": "^4.0.540",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.540"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.1.12",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20.11"
+  }
+}
