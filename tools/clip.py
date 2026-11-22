@@ -70,10 +70,11 @@ def bars(video, start, length):
     return f'crop=iw:{h}:0:{(ih - h) // 2},'
 
 
-def cut(video, start, length, out):
+def cut(video, start, length, out, zoom=1.0):
     g = (f'[0:v]{bars(video, start, length)}fps=30,split[a][b];'
          '[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=28:2,eq=brightness=-0.22[bg];'
-         '[b]scale=-2:844,crop=1080:844[fg];[bg][fg]overlay=0:(H-h)/2-90,format=yuv420p[v]')
+         f'[b]scale=-2:{int(844 * zoom / 2) * 2},crop=1080:844[fg];'
+         '[bg][fg]overlay=0:(H-h)/2-90,format=yuv420p[v]')
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(start), '-t', str(length), '-i', video, '-filter_complex', g, '-map', '[v]', '-map', '0:a?',
                     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '19', '-c:a', 'aac', '-ar', '48000', out], check=True)
 
@@ -85,4 +86,4 @@ if __name__ == '__main__':
         avoid = [tuple(map(float, s.split('-'))) for s in spans.split(',') if s]
         print(json.dumps(find(a[1], float(a[2]), avoid, int(a[a.index('--seed') + 1]) if '--seed' in a else 0)))
     elif a[0] == 'cut':
-        cut(a[1], float(a[2]), float(a[3]), a[4])
+        cut(a[1], float(a[2]), float(a[3]), a[4], float(a[5]) if len(a) > 5 else 1.0)

@@ -12,4 +12,14 @@ export function refillCount(sizes, most = 20) {
   return fit < 5 ? 0 : Math.min(fit, most)
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) console.log(refillCount(JSON.parse(readFileSync(0, 'utf8'))))
+/** Scripts in brand/clips.json that have not become a video yet. */
+export function scriptsLeft() {
+  const root = new URL('..', import.meta.url)
+  const used = new Set(JSON.parse(readFileSync(new URL('data/history.json', root), 'utf8')).map(h => h.clipId))
+  return JSON.parse(readFileSync(new URL('brand/clips.json', root), 'utf8')).filter(c => !used.has(c.id)).length
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  if (process.argv.includes('--left')) console.log(scriptsLeft())
+  else console.log(refillCount(JSON.parse(readFileSync(0, 'utf8')), Math.min(20, scriptsLeft())))
+}

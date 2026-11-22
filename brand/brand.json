@@ -1,12 +1,45 @@
 {
   "name": "GTA 6 Daily",
-  "hashtags": ["#GTA6", "#GTAVI", "#Gaming", "#FunFact", "#Shorts"],
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#Gaming",
+    "#Shorts"
+  ],
   "disclaimer": "Fan page. Not affiliated with or endorsed by Rockstar Games.",
-  "voice": { "name": "am_michael", "speed": 1.08 },
-  "pronounce": { "GTA": "G-T-A" },
-  "timezone": { "label": "India", "offsetMinutes": 330 },
-  "slots": ["20:30"],
-  "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-  "makeWindow": { "start": "02:00", "end": "06:45" },
-  "clip": { "lengths": [15, 30], "sourceAudio": 0, "music": 0.075 }
+  "voice": {
+    "name": "am_michael",
+    "speed": 1.08
+  },
+  "pronounce": {
+    "GTA": "G-T-A"
+  },
+  "timezone": {
+    "label": "India",
+    "offsetMinutes": 330
+  },
+  "slots": [
+    "20:30"
+  ],
+  "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+  ],
+  "makeWindow": {
+    "start": "02:00",
+    "end": "06:45"
+  },
+  "clip": {
+    "lengths": [
+      15,
+      30
+    ],
+    "sourceAudio": 0,
+    "music": 0.075
+  }
 }

@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: How many videos (Pages holds about 60 in total)
-        default: '45'
+        description: How many new videos, limited by the scripts in brand/clips.json
+        default: '3'
       ids:
         description: Re-render these existing video ids instead of making new ones
         required: false
@@ -34,11 +34,15 @@ jobs:
       - id: p
         run: |
           ids="${{ inputs.ids }}"
-          [ -n "$ids" ] || ids="$(node scripts/slot.mjs --list '${{ inputs.count }}')"
+          if [ -z "$ids" ]; then
+            left="$(node scripts/refill.mjs --left)"; count='${{ inputs.count }}'; [ "$count" -le "$left" ] || count="$left"
+            [ "$count" = 0 ] || ids="$(node scripts/slot.mjs --list "$count")"
+          fi
           echo "ids=$ids" >> "$GITHUB_OUTPUT"
 
   make:
     needs: plan
+    if: needs.plan.outputs.ids != ''
     runs-on: ubuntu-latest
     timeout-minutes: 100
     strategy:

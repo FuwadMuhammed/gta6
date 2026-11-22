@@ -1,7 +1,11 @@
 export interface Reel {
   title: string
+  /** Short on-screen hook; older videos show DID YOU KNOW? */
+  hook?: string
+  /** Which script in brand/clips.json made this video */
+  clipId?: string
   source: { id: string, url: string, credit: string }
-  clip: { start: number, length: number, mode: 'highlight' | 'random', seed: number }
+  clip: { start: number, length: number, mode: 'highlight' | 'random', seed: number, zoom?: number }
   scenes: Array<{ type: 'fact', voice: string }>
   post: { caption: string, youtubeTitle: string }
 }

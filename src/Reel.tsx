@@ -47,7 +47,7 @@ export const Reel: React.FC<{ id: string, reel: ReelData, timing: Timing | null 
   return (
     <AbsoluteFill style={{ background: '#000' }}>
       <OffthreadVideo src={staticFile(`runs/${id}/clip.mp4`)} muted />
-      <div style={{ position: 'absolute', top: 250, width: '100%', textAlign: 'center', fontFamily: look.font, fontSize: 58, letterSpacing: 2, color: look.accent, textShadow: stroke }}>DID YOU KNOW?</div>
+      <div style={{ position: 'absolute', top: 250, width: '100%', textAlign: 'center', fontFamily: look.font, fontSize: 58, letterSpacing: 2, color: look.accent, textShadow: stroke }}>{reel.hook ?? 'DID YOU KNOW?'}</div>
       <Captions reel={reel} timing={timing} />
       <div style={{ position: 'absolute', top: 1500, left: 70, width: 800, fontFamily: 'Helvetica, Arial, sans-serif', fontSize: 25, color: 'rgba(255,255,255,.75)', textShadow: '0 2px 5px #000' }}>Video: {reel.source.credit}</div>
       <Audio src={staticFile(`runs/${id}/mix.wav`)} />

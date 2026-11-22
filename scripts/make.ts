@@ -26,7 +26,7 @@ export async function make(file: string): Promise<{ ok: true, mp4: string, durat
     const source = (JSON.parse(readFileSync(join(ROOT, 'sources.json'), 'utf8')) as Source[]).find(s => s.id === reel.source.id)
       ?? { ...reel.source, title: reel.title, license: '', file: `${reel.source.id}.mp4` }
     console.log(`  clip ${reel.clip.length}s at ${reel.clip.start}s (${reel.clip.mode})`)
-    run(python(), ['tools/clip.py', 'cut', sourcePath(source), String(reel.clip.start), String(reel.clip.length), join(dir, 'clip.mp4')])
+    run(python(), ['tools/clip.py', 'cut', sourcePath(source), String(reel.clip.start), String(reel.clip.length), join(dir, 'clip.mp4'), String(reel.clip.zoom ?? 1)])
     console.log('  voice')
     run(python(), ['tools/voice.py', file])
     console.log('  music')
