@@ -24,6 +24,13 @@ export function sourcePath(s: Source) {
   return file
 }
 
+/** A complete title within YouTube's 100 characters: never cuts a sentence. */
+export function youtubeTitle(hook: string) {
+  const fact = hook.replace(/[.!]+$/, '')
+  return [`Did you know? ${fact}. #GTA6 #Shorts`, `${fact} #GTA6 #Shorts`, `${fact} #Shorts`]
+    .find(t => t.length <= 100) ?? 'A fun fact you probably did not know #GTA6 #Shorts'
+}
+
 export function pick(date: string) {
   // Parallel workers each take their own share of the footage (SHARD=<index>/<workers>).
   const [k, n] = (process.env.SHARD ?? '0/1').split('/').map(Number)
@@ -66,7 +73,7 @@ export function pick(date: string) {
     scenes: chosen.map((f, i) => ({ type: 'fact', voice: i ? `Also, ${core(f)}` : f })),
     post: {
       caption: `${hook}\n\nGameplay Credit: ${source.credit}${source.creditUrl ? ` (${source.creditUrl})` : ''}\n${BRAND.disclaimer}\n\n${BRAND.hashtags.join(' ')}`,
-      youtubeTitle: `GTA 6 clip + did you know? ${hook}`.slice(0, 91) + ' #Shorts',
+      youtubeTitle: youtubeTitle(hook),
     },
   }
   mkdirSync(join(ROOT, 'reels'), { recursive: true })
