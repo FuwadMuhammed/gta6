@@ -43,4 +43,5 @@ git -c user.name="reel-bot" -c user.email="41898282+github-actions[bot]@users.no
 git push -q -f origin HEAD:media
 cd - >/dev/null
 git worktree remove --force "$dir"
+git branch -qD media-new 2>/dev/null || true
 echo "media branch updated with $date.mp4"

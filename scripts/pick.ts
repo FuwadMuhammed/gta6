@@ -25,7 +25,10 @@ export function sourcePath(s: Source) {
 }
 
 export function pick(date: string) {
-  const sources = json<Source[]>('sources.json')
+  // Parallel workers each take their own share of the footage (SHARD=<index>/<workers>).
+  const [k, n] = (process.env.SHARD ?? '0/1').split('/').map(Number)
+  const all = json<Source[]>('sources.json')
+  const sources = all.filter((_, i) => i % n === k)
   if (!sources.length) throw new Error('sources.json is empty: add a video with npm run add -- <youtube url>')
   const history = json<Entry[]>('data/history.json').filter(h => h.status !== 'test')
   const seed = [...date].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7)

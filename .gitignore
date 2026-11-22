@@ -7,3 +7,4 @@ public/runs
 # downloaded source videos live in the "sources" GitHub release, not in git
 sources/
 samples-keep/
+.DS_Store

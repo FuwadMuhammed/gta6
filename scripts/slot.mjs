@@ -44,4 +44,23 @@ export function nextSlot({ now = Date.now(), any = false } = {}) {
   return ''
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) console.log(nextSlot({ any: process.argv.includes('--any') }))
+/** The next `count` free slots, for making videos ahead of time. */
+export function freeSlots(count, now = Date.now()) {
+  const b = brand(), done = new Set(history().map((e) => e.date)), out = []
+  const local = new Date(now + b.timezone.offsetMinutes * 60e3)
+  for (let d = 0; d < 400 && out.length < count; d++) {
+    const date = new Date(Date.UTC(local.getUTCFullYear(), local.getUTCMonth(), local.getUTCDate() + d))
+    if (!b.days.includes(WEEKDAYS[date.getUTCDay()])) continue
+    for (const s of b.slots) {
+      const id = `${date.toISOString().slice(0, 10)}-${s.replace(':', '')}`
+      if (postTime(id, b) >= now + 40 * 60e3 && !done.has(id) && out.length < count) out.push(id)
+    }
+  }
+  return out
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const i = process.argv.indexOf('--list')
+  if (i > 0) console.log(freeSlots(Number(process.argv[i + 1])).join(' '))
+  else console.log(nextSlot({ any: process.argv.includes('--any') }))
+}

@@ -1,0 +1,150 @@
+name: Batch videos
+
+# Makes many videos at once with parallel workers, then publishes them together. Never posts.
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: How many videos (Pages holds about 60 in total)
+        default: '45'
+      stop_at:
+        description: Start no new video after this UTC time (HH:MM), empty for no limit
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-reel
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      ids: ${{ steps.p.outputs.ids }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: echo "ids=$(node scripts/slot.mjs --list '${{ inputs.count }}')" >> "$GITHUB_OUTPUT"
+
+  make:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    strategy:
+      fail-fast: false
+      matrix:
+        worker: [0, 1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Cache voice and Whisper models
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.faceless-shorts/kokoro
+            ~/.cache/huggingface
+          key: models-kokoro-v1-whisper-small-en-v1
+      - name: Install the Python tools
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -q numpy scipy kokoro-onnx faster-whisper
+          .venv/bin/python tools/voice.py --download
+          .venv/bin/python -c "from faster_whisper import WhisperModel; WhisperModel('small.en', device='cpu', compute_type='int8')"
+      - name: Install packages
+        run: |
+          npm ci --no-audit --no-fund
+          sudo apt-get install -y -qq libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libgbm1 libasound2t64 libxrandr2 libxkbcommon0 libxfixes3 libxcomposite1 libxdamage1 libpango-1.0-0 libcairo2 libcups2t64
+          npx remotion browser ensure
+      - name: Make this worker's videos
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHARD: ${{ matrix.worker }}/5
+          STOP_AT: ${{ inputs.stop_at }}
+        run: |
+          unset GITHUB_OUTPUT
+          i=0
+          for id in ${{ needs.plan.outputs.ids }}; do
+            n=$((i % 5)); i=$((i + 1))
+            [ "$n" = "${{ matrix.worker }}" ] || continue
+            if [ -n "$STOP_AT" ] && [ "$(date -u +%H:%M)" \> "$STOP_AT" ]; then echo "time is up"; break; fi
+            npx tsx scripts/daily.ts --id "$id" || { rm -f "reels/$id.json"; npx tsx scripts/daily.ts --id "$id" || { echo "::warning::$id failed"; rm -f "reels/$id.json" "out/$id.mp4"; }; }
+            rm -rf "public/runs/$id" "out/$id.raw.mp4" "out/$id.props.json"
+          done
+          mkdir -p done
+          cp data/history.json "done/history-${{ matrix.worker }}.json"
+          for f in out/*.mp4; do [ -f "$f" ] || continue; id="$(basename "$f" .mp4)"; [ -f "reels/$id.json" ] && cp "$f" "reels/$id.json" done/; done
+          cp out/*-sheet.jpg done/ 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: videos-${{ matrix.worker }}
+          path: done/
+          retention-days: 7
+
+  collect:
+    needs: make
+    if: always() && needs.make.result != 'skipped'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: videos-*
+          merge-multiple: true
+          path: done
+      - name: Save the finished videos
+        env:
+          KEEP_DAYS: '400'
+        run: |
+          git config user.name reel-bot
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          ls done/*.mp4 >/dev/null
+          node -e "
+            const fs=require('fs');const made=new Set(fs.readdirSync('done').filter(f=>f.endsWith('.mp4')).map(f=>f.slice(0,-4)));
+            const h=new Map(JSON.parse(fs.readFileSync('data/history.json')).map(e=>[e.date,e]));
+            for(const f of fs.readdirSync('done').filter(f=>f.startsWith('history-')))for(const e of JSON.parse(fs.readFileSync('done/'+f)))if(made.has(e.date))h.set(e.date,e);
+            fs.writeFileSync('data/history.json',JSON.stringify([...h.values()].sort((a,b)=>a.date<b.date?-1:1),null,2)+'\n')"
+          mkdir -p out
+          for f in done/*.mp4; do id="$(basename "$f" .mp4)"; cp "done/$id.json" reels/; mv "$f" out/; done
+          git add reels/ data/history.json
+          git commit -qm "reels: batch of $(ls out/*.mp4 | wc -l)"
+          git pull -q --rebase origin main && git push -q origin HEAD:main
+          for f in out/*.mp4; do id="$(basename "$f" .mp4)"; scripts/media.sh "$id" "$f" "reels/$id.json"; done
+
+  publish:
+    needs: collect
+    if: always() && needs.collect.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: media
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+          name: github-pages-batch-${{ github.run_attempt }}
+      - run: sleep 15
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-batch-${{ github.run_attempt }}

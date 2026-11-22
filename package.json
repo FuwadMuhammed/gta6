@@ -10,7 +10,8 @@
     "typecheck": "tsc",
     "add": "tsx scripts/add.ts",
     "daily": "tsx scripts/daily.ts",
-    "post": "tsx scripts/post.ts"
+    "post": "tsx scripts/post.ts",
+    "post-queue": "tsx scripts/post-queue.ts"
   },
   "dependencies": {
     "@remotion/cli": "4.0.540",
