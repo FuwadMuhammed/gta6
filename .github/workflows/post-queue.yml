@@ -1,23 +1,30 @@
-name: Post queue
+name: Buffer loop
 
-# Sends finished videos to Buffer a few days ahead. Does nothing until POSTING is "on".
+# Every 6 hours: keeps Buffer full, then deletes hosted videos 2 days after every channel confirms they were sent.
+# Does nothing until POSTING is "on".
 on:
   schedule:
-    - cron: '30 6 * * *'
+    - cron: '30 */6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+  issues: write
 
 concurrency:
   group: daily-reel
   cancel-in-progress: false
 
 jobs:
-  post:
+  queue:
     if: vars.POSTING == 'on'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    outputs:
+      ids: ${{ steps.clean.outputs.ids }}
+      problems: ${{ steps.clean.outputs.problems }}
     env:
       BUFFER_API_KEY_1: ${{ secrets.BUFFER_API_KEY_1 }}
       BUFFER_API_KEY_2: ${{ secrets.BUFFER_API_KEY_2 }}
@@ -28,7 +35,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --no-audit --no-fund
-      - run: npx tsx scripts/post-queue.ts
+      - name: Fill Buffer up to its limit
+        run: npx tsx scripts/post-queue.ts
       - name: Commit what was scheduled
         if: always()
         run: |
@@ -37,3 +45,63 @@ jobs:
           git add data/posts/ data/history.json
           git commit -qm "posted: queue" || echo "nothing to commit"
           git pull -q --rebase origin main && git push -q origin HEAD:main
+      - name: Find videos safe to delete
+        id: clean
+        run: npx tsx scripts/cleanup.ts
+      - name: Remove them from hosting
+        if: steps.clean.outputs.ids != ''
+        run: scripts/media-remove.sh ${{ steps.clean.outputs.ids }}
+
+  publish:
+    needs: queue
+    if: needs.queue.outputs.ids != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: media
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+          name: github-pages-loop-${{ github.run_id }}-${{ github.run_attempt }}
+      - run: sleep 15
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-loop-${{ github.run_id }}-${{ github.run_attempt }}
+
+  record:
+    needs: [queue, publish]
+    if: needs.publish.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsx scripts/cleanup.ts --mark ${{ needs.queue.outputs.ids }}
+      - run: |
+          git config user.name reel-bot
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/history.json
+          git commit -qm "cleaned: ${{ needs.queue.outputs.ids }}"
+          git pull -q --rebase origin main && git push -q origin HEAD:main
+
+  report:
+    needs: [queue, publish, record]
+    if: failure() || needs.queue.outputs.problems > 0
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - run: |
+          title="Buffer loop needs attention"
+          open="$(gh issue list -R "${{ github.repository }}" --state open --search "$title in:title" --json number --jq length)"
+          [ "$open" != 0 ] || gh issue create -R "${{ github.repository }}" --title "$title" --body "A post failed or the loop stopped. No unconfirmed video was deleted. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

@@ -177,11 +177,11 @@ export async function status(date: string) {
   const cfg: Config = JSON.parse(readFileSync(join(ROOT, 'brand/channels.json'), 'utf8'))
   const savedFile = join(ROOT, 'data/posts', `${date}.json`)
   const saved: Record<string, Saved> = existsSync(savedFile) ? JSON.parse(readFileSync(savedFile, 'utf8')) : {}
-  const out: Record<string, { status: string, link?: string, error?: string }> = {}
+  const out: Record<string, { status: string, link?: string, error?: string, sentAt?: string }> = {}
   for (const [service, s] of Object.entries(saved)) {
     const ch = cfg.channels.find(c => c.service === service.split(':')[0])!
     const p = (await gql(ch.key, STATUS, { input: { id: s.id } })).post
-    out[service] = { status: p?.status ?? 'missing', link: p?.externalLink ?? undefined, error: p?.error?.message ?? undefined }
+    out[service] = { status: p?.status ?? 'missing', link: p?.externalLink ?? undefined, error: p?.error?.message ?? undefined, sentAt: p?.sentAt ?? undefined }
   }
   return out
 }
