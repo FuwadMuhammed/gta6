@@ -548,6 +548,18 @@
     "mode": "highlight"
   },
   {
+    "date": "2027-01-03-2030",
+    "status": "rendered",
+    "source": "gi5sORTrvjI-p009",
+    "start": 564,
+    "length": 15,
+    "facts": [
+      "sunlight takes about eight minutes to reach Earth.",
+      "giraffes have seven neck bones, exactly the same number as humans."
+    ],
+    "mode": "highlight"
+  },
+  {
     "date": "2027-01-04-2030",
     "status": "rendered",
     "source": "cmbyetOax5k-p000",
@@ -637,6 +649,21 @@
       "flamingos are pink because of the food they eat."
     ],
     "mode": "random"
+  },
+  {
+    "date": "2027-01-11-2030",
+    "status": "rendered",
+    "source": "gi5sORTrvjI-p000",
+    "start": 539,
+    "length": 30,
+    "facts": [
+      "sunlight takes about eight minutes to reach Earth.",
+      "giraffes have seven neck bones, exactly the same number as humans.",
+      "the computer that guided Apollo to the Moon had only about four kilobytes of memory.",
+      "bananas are botanically berries, but strawberries are not.",
+      "butterflies taste with their feet."
+    ],
+    "mode": "highlight"
   },
   {
     "date": "2027-01-12-2030",
