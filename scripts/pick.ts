@@ -1,6 +1,6 @@
 // Chooses what goes into one video: the least-used source, a clip length, unused facts, and the best moment.
 import { execFileSync, spawnSync } from 'node:child_process'
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { BRAND } from '../src/brand'
 import type { Reel } from '../src/types'
@@ -18,8 +18,16 @@ export function sourcePath(s: Source) {
   const file = join(ROOT, 'sources', s.file)
   if (!existsSync(file)) {
     mkdirSync(join(ROOT, 'sources'), { recursive: true })
-    const r = spawnSync('gh', ['release', 'download', 'sources', '-p', s.file, '-D', join(ROOT, 'sources')], { cwd: ROOT, encoding: 'utf8' })
-    if (r.status !== 0) throw new Error(`could not fetch ${s.file}: ${r.stderr}`)
+    // Downloads into a temp folder and moves the file only when complete, so a dropped connection never leaves a broken video.
+    const tmp = mkdtempSync(join(ROOT, 'sources', '.dl-'))
+    let error = ''
+    for (let attempt = 1; attempt <= 4 && !existsSync(file); attempt++) {
+      const r = spawnSync('gh', ['release', 'download', 'sources', '-p', s.file, '-D', tmp, '--clobber'], { cwd: ROOT, encoding: 'utf8' })
+      if (r.status === 0) renameSync(join(tmp, s.file), file)
+      else { error = r.stderr; spawnSync('sleep', [String(attempt * 5)]) }
+    }
+    rmSync(tmp, { recursive: true, force: true })
+    if (!existsSync(file)) throw new Error(`could not fetch ${s.file}: ${error}`)
   }
   return file
 }

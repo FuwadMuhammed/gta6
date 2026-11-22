@@ -129,7 +129,7 @@ jobs:
           mkdir -p out
           for f in done/*.mp4; do id="$(basename "$f" .mp4)"; cp "done/$id.json" reels/; mv "$f" out/; done
           git add reels/ data/history.json
-          git commit -qm "reels: batch of $(ls out/*.mp4 | wc -l)"
+          git commit -qm "reels: batch of $(ls out/*.mp4 | wc -l)" || echo "records already up to date"
           git pull -q --rebase origin main && git push -q origin HEAD:main
           for f in out/*.mp4; do id="$(basename "$f" .mp4)"; scripts/media.sh "$id" "$f" "reels/$id.json"; done
 
