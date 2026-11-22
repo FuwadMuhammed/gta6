@@ -1,1 +1,7 @@
-{ "channels": [] }
+{
+  "channels": [
+    { "service": "instagram", "name": "npc.fact.gta", "id": "6b0296138541f09ecb603f7d", "key": "BUFFER_API_KEY_1" },
+    { "service": "linkedin", "name": "npc.fact gta6", "id": "6b0296918541f09ecb60445d", "key": "BUFFER_API_KEY_1" },
+    { "service": "youtube", "name": "npc.fact.gta6", "id": "6b0296e58541f09ecb604727", "key": "BUFFER_API_KEY_1" }
+  ]
+}
