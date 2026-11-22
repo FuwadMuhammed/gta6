@@ -15,6 +15,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: daily-reel
@@ -148,3 +149,15 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages-batch-${{ github.run_attempt }}
+
+  report:
+    needs: [plan, make, collect, publish]
+    if: failure()
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - run: |
+          title="Video batch needs attention"
+          open="$(gh issue list -R "${{ github.repository }}" --state open --search "$title in:title" --json number --jq length)"
+          [ "$open" != 0 ] || gh issue create -R "${{ github.repository }}" --title "$title" --body "A video batch failed. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

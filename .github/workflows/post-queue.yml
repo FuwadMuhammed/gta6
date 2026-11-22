@@ -1,13 +1,19 @@
 name: Buffer loop
 
-# Every 6 hours: keeps Buffer full, then deletes hosted videos 2 days after every channel confirms they were sent.
+# Every 6 hours: keeps Buffer full, deletes hosted videos 2 days after every channel confirms they were sent,
+# then starts a new batch when enough space is free.
 # Does nothing until POSTING is "on".
 on:
   schedule:
     - cron: '30 */6 * * *'
   workflow_dispatch:
+    inputs:
+      refill_count:
+        description: Make this many videos now instead of working it out from free space
+        required: false
 
 permissions:
+  actions: write
   contents: write
   pages: write
   id-token: write
@@ -94,8 +100,27 @@ jobs:
           git commit -qm "cleaned: ${{ needs.queue.outputs.ids }}"
           git pull -q --rebase origin main && git push -q origin HEAD:main
 
-  report:
+  refill:
     needs: [queue, publish, record]
+    if: always() && needs.queue.result == 'success' && needs.publish.result != 'failure' && needs.record.result != 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      ASKED: ${{ inputs.refill_count }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start a batch if there is room
+        run: |
+          count="$(gh api "repos/$REPO/git/trees/media" --jq '[.tree[]|select(.type=="blob")|.size]' | node scripts/refill.mjs)"
+          if [[ "$ASKED" =~ ^[0-9]+$ ]]; then count="$ASKED"; fi
+          active="$(gh run list -R "$REPO" --workflow batch.yml --limit 10 --json status --jq '[.[]|select(.status!="completed")]|length')"
+          echo "room for $count video(s), $active batch(es) active"
+          if [ "$count" -gt 0 ] && [ "$active" = 0 ]; then gh workflow run batch.yml -R "$REPO" --ref main -f count="$count"; fi
+
+  report:
+    needs: [queue, publish, record, refill]
     if: failure() || needs.queue.outputs.problems > 0
     runs-on: ubuntu-latest
     env:
