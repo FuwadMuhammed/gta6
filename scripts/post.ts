@@ -216,7 +216,7 @@ async function listChannels() {
   console.log(JSON.stringify({ channels: out }, null, 2))
 }
 
-async function remove(date: string) {
+export async function remove(date: string) {
   loadEnv()
   const cfg: Config = JSON.parse(readFileSync(join(ROOT, 'brand/channels.json'), 'utf8'))
   const savedFile = join(ROOT, 'data/posts', `${date}.json`)

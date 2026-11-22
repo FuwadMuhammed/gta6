@@ -59,6 +59,18 @@ export function freeSlots(count, now = Date.now()) {
   return out
 }
 
+/** Post times (UTC ms) of every slot in the coming `days` days. */
+export function slotTimes(days, now = Date.now()) {
+  const b = brand(), out = []
+  const local = new Date(now + b.timezone.offsetMinutes * 60e3)
+  for (let d = 0; d < days; d++) {
+    const date = new Date(Date.UTC(local.getUTCFullYear(), local.getUTCMonth(), local.getUTCDate() + d))
+    if (!b.days.includes(WEEKDAYS[date.getUTCDay()])) continue
+    for (const s of b.slots) out.push(postTime(`${date.toISOString().slice(0, 10)}-${s.replace(':', '')}`, b))
+  }
+  return out.filter((t) => t > now).sort((x, y) => x - y)
+}
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const i = process.argv.indexOf('--list')
   if (i > 0) console.log(freeSlots(Number(process.argv[i + 1])).join(' '))

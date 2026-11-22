@@ -22,8 +22,9 @@ export async function make(file: string): Promise<{ ok: true, mp4: string, durat
     const dir = join(ROOT, 'public/runs', id)
     mkdirSync(dir, { recursive: true })
     mkdirSync(join(ROOT, 'out'), { recursive: true })
+    // A part retired from sources.json stays in the release, so its existing videos can still be re-rendered.
     const source = (JSON.parse(readFileSync(join(ROOT, 'sources.json'), 'utf8')) as Source[]).find(s => s.id === reel.source.id)
-    if (!source) throw new Error(`source ${reel.source.id} is not in sources.json`)
+      ?? { ...reel.source, title: reel.title, license: '', file: `${reel.source.id}.mp4` }
     console.log(`  clip ${reel.clip.length}s at ${reel.clip.start}s (${reel.clip.mode})`)
     run(python(), ['tools/clip.py', 'cut', sourcePath(source), String(reel.clip.start), String(reel.clip.length), join(dir, 'clip.mp4')])
     console.log('  voice')

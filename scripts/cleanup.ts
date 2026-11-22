@@ -35,7 +35,7 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   const services = channels.map(c => c.service)
   const ids: string[] = []
   const problems: string[] = []
-  for (const h of history.filter(x => x.status === 'posted' && Date.parse(x.date.slice(0, 10)) < Date.now())) {
+  for (const h of history.filter(x => x.status === 'posted')) {
     if (!existsSync(join(ROOT, 'data/posts', `${h.date}.json`))) continue
     const states = await status(h.date)
     for (const [k, v] of Object.entries(states))

@@ -7,6 +7,9 @@ on:
       count:
         description: How many videos (Pages holds about 60 in total)
         default: '45'
+      ids:
+        description: Re-render these existing video ids instead of making new ones
+        required: false
       stop_at:
         description: Start no new video after this UTC time (HH:MM), empty for no limit
         default: ''
@@ -29,7 +32,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: p
-        run: echo "ids=$(node scripts/slot.mjs --list '${{ inputs.count }}')" >> "$GITHUB_OUTPUT"
+        run: |
+          ids="${{ inputs.ids }}"
+          [ -n "$ids" ] || ids="$(node scripts/slot.mjs --list '${{ inputs.count }}')"
+          echo "ids=$ids" >> "$GITHUB_OUTPUT"
 
   make:
     needs: plan
@@ -80,7 +86,7 @@ jobs:
             n=$((i % 5)); i=$((i + 1))
             [ "$n" = "${{ matrix.worker }}" ] || continue
             if [ -n "$STOP_AT" ] && [ "$(date -u +%H:%M)" \> "$STOP_AT" ]; then echo "time is up"; break; fi
-            npx tsx scripts/daily.ts --id "$id" || { rm -f "reels/$id.json"; npx tsx scripts/daily.ts --id "$id" || { echo "::warning::$id failed"; rm -f "reels/$id.json" "out/$id.mp4"; }; }
+            npx tsx scripts/daily.ts --id "$id" || { [ -n "${{ inputs.ids }}" ] || rm -f "reels/$id.json"; npx tsx scripts/daily.ts --id "$id" || { echo "::warning::$id failed"; rm -f "out/$id.mp4"; [ -n "${{ inputs.ids }}" ] || rm -f "reels/$id.json"; }; }
             rm -rf "public/runs/$id" "out/$id.raw.mp4" "out/$id.props.json"
           done
           mkdir -p done

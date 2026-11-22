@@ -21,7 +21,7 @@
     "start": 22,
     "length": 15,
     "facts": [
-      "France covers more time zones than any other country, thanks to its overseas territories.",
+      "The Sun makes up about 99.8 percent of the mass of our solar system.",
       "octopuses have three hearts and blue blood."
     ],
     "mode": "highlight"
@@ -61,8 +61,8 @@
     "facts": [
       "sea otters often hold hands while sleeping so they do not drift apart.",
       "an average fluffy cumulus cloud weighs around five hundred tons.",
-      "flamingos are pink because of the food they eat.",
-      "France covers more time zones than any other country, thanks to its overseas territories."
+      "astronauts can grow slightly taller while living in space.",
+      "Mars is home to Olympus Mons, the tallest known volcano in the solar system."
     ],
     "mode": "highlight"
   },
@@ -88,7 +88,7 @@
       "koalas have fingerprints that look remarkably like human fingerprints.",
       "honey can stay edible for thousands of years when it is sealed properly.",
       "the Eiffel Tower can grow about fifteen centimeters taller in summer heat.",
-      "giraffes have seven neck bones, exactly the same number as humans."
+      "the Moon drifts about four centimeters farther from Earth every year."
     ],
     "mode": "highlight"
   },
@@ -100,7 +100,7 @@
     "length": 15,
     "facts": [
       "peanuts are not actually nuts. They are legumes, like beans and lentils.",
-      "an average fluffy cumulus cloud weighs around five hundred tons."
+      "Neptune takes about 165 Earth years to orbit the Sun."
     ],
     "mode": "highlight"
   },
@@ -112,7 +112,7 @@
     "length": 15,
     "facts": [
       "Oxford University was already teaching students before the Aztec Empire began.",
-      "bananas are botanically berries, but strawberries are not."
+      "Saturn's rings are mostly made of water ice."
     ],
     "mode": "highlight"
   },
@@ -124,9 +124,9 @@
     "length": 30,
     "facts": [
       "the first home video game console, the Magnavox Odyssey, came out in 1972.",
-      "wombats are the only animals known to produce cube shaped poop.",
-      "giraffes have seven neck bones, exactly the same number as humans.",
-      "Nintendo was founded in 1889, and it started out making playing cards."
+      "we always see the same side of the Moon from Earth.",
+      "Voyager 1 is the most distant human made object from Earth.",
+      "Jupiter has the shortest day of any planet, at around ten hours."
     ],
     "mode": "highlight"
   },
@@ -140,7 +140,8 @@
       "France covers more time zones than any other country, thanks to its overseas territories.",
       "flamingos are pink because of the food they eat."
     ],
-    "mode": "highlight"
+    "mode": "highlight",
+    "postAt": "2026-11-22T07:39:24.404Z"
   },
   {
     "date": "2026-12-03-2030",
@@ -149,8 +150,8 @@
     "start": 493,
     "length": 30,
     "facts": [
-      "sunlight takes about eight minutes to reach Earth.",
-      "Oxford University was already teaching students before the Aztec Empire began.",
+      "a group of flamingos is called a flamboyance.",
+      "Ganymede, a moon of Jupiter, is larger than the planet Mercury.",
       "carrots were mostly purple and yellow before orange ones became popular.",
       "the little dot on top of a lowercase i is called a tittle."
     ],
@@ -163,7 +164,7 @@
     "start": 2,
     "length": 15,
     "facts": [
-      "koalas have fingerprints that look remarkably like human fingerprints.",
+      "moonlight takes just over one second to reach Earth.",
       "a day on Venus is longer than a year on Venus."
     ],
     "mode": "highlight"
@@ -175,11 +176,11 @@
     "start": 377,
     "length": 30,
     "facts": [
-      "a day on Venus is longer than a year on Venus.",
+      "space is almost silent because sound needs something to travel through.",
       "Australia is wider than the Moon.",
-      "wombats are the only animals known to produce cube shaped poop.",
-      "France covers more time zones than any other country, thanks to its overseas territories.",
-      "butterflies taste with their feet."
+      "peregrine falcons can dive at over three hundred kilometers per hour.",
+      "your left lung is smaller than your right to make room for your heart.",
+      "sunsets on Mars appear blue."
     ],
     "mode": "highlight"
   },
@@ -190,8 +191,8 @@
     "start": 438.5,
     "length": 15,
     "facts": [
-      "peanuts are not actually nuts. They are legumes, like beans and lentils.",
-      "bananas are botanically berries, but strawberries are not."
+      "emperor penguin dads balance eggs on their feet to keep them warm.",
+      "a group of crows is called a murder."
     ],
     "mode": "highlight"
   },
@@ -202,9 +203,9 @@
     "start": 90,
     "length": 30,
     "facts": [
-      "the Eiffel Tower can grow about fifteen centimeters taller in summer heat.",
+      "the blue whale is the largest animal known to have ever lived.",
       "a mantis shrimp punches so fast that the water around its claw briefly boils.",
-      "sunlight takes about eight minutes to reach Earth.",
+      "a group of owls is called a parliament.",
       "one teaspoon of a neutron star would weigh billions of tons."
     ],
     "mode": "highlight"
@@ -216,8 +217,8 @@
     "start": 500,
     "length": 15,
     "facts": [
-      "one teaspoon of a neutron star would weigh billions of tons.",
-      "flamingos are pink because of the food they eat."
+      "geckos can walk on glass using tiny hairs on their toes.",
+      "Earth is closest to the Sun in early January."
     ],
     "mode": "highlight"
   },
@@ -228,10 +229,10 @@
     "start": 115.5,
     "length": 30,
     "facts": [
-      "wombats are the only animals known to produce cube shaped poop.",
-      "sea otters often hold hands while sleeping so they do not drift apart.",
-      "Nintendo was founded in 1889, and it started out making playing cards.",
-      "a mantis shrimp punches so fast that the water around its claw briefly boils."
+      "an octopus can squeeze through any gap larger than its beak.",
+      "Venus is the hottest planet, even though Mercury is closer to the Sun.",
+      "Arctic terns migrate from the Arctic to Antarctica and back every year.",
+      "the king of hearts is the only king in a deck without a mustache."
     ],
     "mode": "highlight"
   },
@@ -242,10 +243,10 @@
     "start": 543.5,
     "length": 30,
     "facts": [
-      "giraffes have seven neck bones, exactly the same number as humans.",
+      "Lake Baikal in Russia is the deepest lake in the world.",
       "the computer that guided Apollo to the Moon had only about four kilobytes of memory.",
       "Pluto has not completed a single orbit of the Sun since it was discovered in 1930.",
-      "flamingos are pink because of the food they eat."
+      "male seahorses are the ones that carry the babies."
     ],
     "mode": "highlight"
   },
@@ -256,8 +257,8 @@
     "start": 116,
     "length": 15,
     "facts": [
-      "a mantis shrimp punches so fast that the water around its claw briefly boils.",
-      "octopuses have three hearts and blue blood."
+      "sloths usually climb down from their trees about once a week to poop.",
+      "Halley's Comet returns about every 76 years."
     ],
     "mode": "highlight"
   },
@@ -268,9 +269,9 @@
     "start": 18.5,
     "length": 30,
     "facts": [
-      "Oxford University was already teaching students before the Aztec Empire began.",
-      "carrots were mostly purple and yellow before orange ones became popular.",
-      "Pluto has not completed a single orbit of the Sun since it was discovered in 1930.",
+      "the Pacific Ocean is larger than all of Earth's land combined.",
+      "the Mariana Trench is the deepest known part of the ocean.",
+      "the Great Wall of China is over twenty thousand kilometers long in total.",
       "the national animal of Scotland is the unicorn."
     ],
     "mode": "highlight"
@@ -282,8 +283,8 @@
     "start": 42.5,
     "length": 15,
     "facts": [
-      "Pluto has not completed a single orbit of the Sun since it was discovered in 1930.",
-      "Australia is wider than the Moon."
+      "Earth's inner core is about as hot as the surface of the Sun.",
+      "starfish do not have a brain."
     ],
     "mode": "random"
   },
@@ -294,10 +295,10 @@
     "start": 42.5,
     "length": 30,
     "facts": [
-      "Pluto has not completed a single orbit of the Sun since it was discovered in 1930.",
-      "the little dot on top of a lowercase i is called a tittle.",
-      "Australia is wider than the Moon.",
-      "flamingos are pink because of the food they eat."
+      "rice is a staple food for more than half of the world.",
+      "the Statue of Liberty was originally the color of a copper penny.",
+      "cheetahs are the fastest land animals.",
+      "male platypuses have venomous spurs on their hind legs."
     ],
     "mode": "highlight"
   },
@@ -309,7 +310,7 @@
     "length": 15,
     "facts": [
       "a lightning bolt is about five times hotter than the surface of the Sun.",
-      "the national animal of Scotland is the unicorn."
+      "owls cannot move their eyes inside their sockets."
     ],
     "mode": "highlight"
   },
@@ -320,9 +321,9 @@
     "start": 227.5,
     "length": 30,
     "facts": [
-      "Pluto has not completed a single orbit of the Sun since it was discovered in 1930.",
-      "the computer that guided Apollo to the Moon had only about four kilobytes of memory.",
-      "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid."
+      "Pompeii was buried by the eruption of Vesuvius in the year 79.",
+      "Albert Einstein won his Nobel Prize for the photoelectric effect, not relativity.",
+      "helium was discovered on the Sun before it was found on Earth."
     ],
     "mode": "highlight"
   },
@@ -333,8 +334,8 @@
     "start": 209,
     "length": 15,
     "facts": [
-      "footprints left on the Moon could last for millions of years.",
-      "an average fluffy cumulus cloud weighs around five hundred tons."
+      "Nepal has the only national flag that is not a rectangle.",
+      "Uranus rotates on its side compared with most other planets."
     ],
     "mode": "highlight"
   },
@@ -345,10 +346,10 @@
     "start": 19,
     "length": 30,
     "facts": [
-      "the first home video game console, the Magnavox Odyssey, came out in 1972.",
-      "the national animal of Scotland is the unicorn.",
-      "wombats are the only animals known to produce cube shaped poop.",
-      "sea otters often hold hands while sleeping so they do not drift apart."
+      "the first YouTube video, Me at the Zoo, was uploaded in 2005.",
+      "an ostrich's eye is bigger than its brain.",
+      "the first modern Olympic Games were held in Athens in 1896.",
+      "the PlayStation grew out of a canceled partnership between Sony and Nintendo."
     ],
     "mode": "highlight"
   },
@@ -359,8 +360,8 @@
     "start": 391.5,
     "length": 15,
     "facts": [
-      "a single pineapple can take around two years to grow.",
-      "tiny animals called tardigrades have survived exposure to the vacuum of space."
+      "the International Space Station orbits Earth about every ninety minutes.",
+      "Marie Curie was the first person to win two Nobel Prizes."
     ],
     "mode": "highlight"
   },
@@ -371,8 +372,8 @@
     "start": 43.5,
     "length": 15,
     "facts": [
-      "a mantis shrimp punches so fast that the water around its claw briefly boils.",
-      "sunlight takes about eight minutes to reach Earth."
+      "a dog named Laika was the first animal to orbit Earth.",
+      "polar bears have black skin under their fur."
     ],
     "mode": "highlight"
   },
@@ -383,11 +384,11 @@
     "start": 524,
     "length": 30,
     "facts": [
-      "honey can stay edible for thousands of years when it is sealed properly.",
-      "sunlight takes about eight minutes to reach Earth.",
-      "one teaspoon of a neutron star would weigh billions of tons.",
-      "in the 1830s, ketchup was sold in America as medicine.",
-      "butterflies taste with their feet."
+      "sound travels about four times faster in water than in air.",
+      "every zebra has its own unique stripe pattern.",
+      "some bamboo can grow almost a meter in a single day.",
+      "the Milky Way contains at least one hundred billion stars.",
+      "kangaroos cannot easily walk backward."
     ],
     "mode": "highlight"
   },
@@ -398,8 +399,8 @@
     "start": 82.5,
     "length": 15,
     "facts": [
-      "Nintendo was founded in 1889, and it started out making playing cards.",
-      "giraffes have seven neck bones, exactly the same number as humans."
+      "some bristlecone pine trees are more than four thousand years old.",
+      "the name LEGO comes from a Danish phrase meaning play well."
     ],
     "mode": "highlight"
   },
@@ -410,10 +411,10 @@
     "start": 427,
     "length": 30,
     "facts": [
-      "bananas are botanically berries, but strawberries are not.",
-      "a lightning bolt is about five times hotter than the surface of the Sun.",
-      "in the 1830s, ketchup was sold in America as medicine.",
-      "the computer that guided Apollo to the Moon had only about four kilobytes of memory."
+      "honeybees share directions by doing a waggle dance.",
+      "the Rubik's Cube was invented by a Hungarian professor in 1974.",
+      "dolphins sleep with half of their brain at a time.",
+      "the word robot comes from a Czech word for forced labor."
     ],
     "mode": "highlight"
   },
@@ -424,8 +425,8 @@
     "start": 334.5,
     "length": 15,
     "facts": [
-      "the computer that guided Apollo to the Moon had only about four kilobytes of memory.",
-      "bananas are botanically berries, but strawberries are not."
+      "a dog's nose print is unique, like a human fingerprint.",
+      "ants breathe through tiny holes in their bodies."
     ],
     "mode": "highlight"
   },
@@ -436,10 +437,10 @@
     "start": 454,
     "length": 30,
     "facts": [
-      "the Eiffel Tower can grow about fifteen centimeters taller in summer heat.",
-      "peanuts are not actually nuts. They are legumes, like beans and lentils.",
-      "an average fluffy cumulus cloud weighs around five hundred tons.",
-      "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid."
+      "hippos produce a reddish oily fluid that works like sunscreen.",
+      "electric eels can produce shocks of more than 800 volts.",
+      "fireflies make light through a chemical reaction in their bodies.",
+      "the smallest bone in your body is inside your ear."
     ],
     "mode": "highlight"
   },
@@ -450,7 +451,7 @@
     "start": 334,
     "length": 15,
     "facts": [
-      "footprints left on the Moon could last for millions of years.",
+      "the femur is the longest bone in the human body.",
       "crows can recognize individual human faces and remember them for years."
     ],
     "mode": "highlight"
@@ -462,10 +463,10 @@
     "start": 26.5,
     "length": 30,
     "facts": [
-      "the first home video game console, the Magnavox Odyssey, came out in 1972.",
-      "crows can recognize individual human faces and remember them for years.",
-      "koalas have fingerprints that look remarkably like human fingerprints.",
-      "peanuts are not actually nuts. They are legumes, like beans and lentils."
+      "tooth enamel is the hardest substance in the human body.",
+      "your heart beats around one hundred thousand times each day.",
+      "tigers have striped skin as well as striped fur.",
+      "cashews grow attached to a fruit called the cashew apple."
     ],
     "mode": "highlight"
   },
@@ -476,8 +477,8 @@
     "start": 58,
     "length": 15,
     "facts": [
-      "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid.",
-      "sharks have existed longer than trees."
+      "almonds are seeds from a close relative of the peach.",
+      "platypuses are mammals that lay eggs."
     ],
     "mode": "random"
   },
@@ -488,10 +489,10 @@
     "start": 81.5,
     "length": 30,
     "facts": [
-      "Oxford University was already teaching students before the Aztec Empire began.",
-      "carrots were mostly purple and yellow before orange ones became popular.",
-      "honey can stay edible for thousands of years when it is sealed properly.",
-      "crows can recognize individual human faces and remember them for years."
+      "saffron comes from the tiny threads of a crocus flower.",
+      "in 1995, potatoes became the first food grown in space.",
+      "popcorn pops because water inside the kernel turns to steam.",
+      "Mount Everest still grows by a few millimeters each year."
     ],
     "mode": "random"
   },
@@ -502,10 +503,10 @@
     "start": 138,
     "length": 30,
     "facts": [
-      "honey can stay edible for thousands of years when it is sealed properly.",
-      "sea otters often hold hands while sleeping so they do not drift apart.",
-      "footprints left on the Moon could last for millions of years.",
-      "koalas have fingerprints that look remarkably like human fingerprints."
+      "the shortest war in history lasted less than one hour.",
+      "the Colosseum in Rome could hold around fifty thousand spectators.",
+      "the Titanic sank on its very first voyage in 1912.",
+      "pound for pound, spider silk is stronger than steel."
     ],
     "mode": "highlight"
   },
@@ -516,8 +517,8 @@
     "start": 93.5,
     "length": 15,
     "facts": [
-      "the Eiffel Tower can grow about fifteen centimeters taller in summer heat.",
-      "koalas have fingerprints that look remarkably like human fingerprints."
+      "the oldest surviving camera photograph was taken in the 1820s.",
+      "bats are the only mammals capable of true flight."
     ],
     "mode": "highlight"
   },
@@ -528,8 +529,8 @@
     "start": 417.5,
     "length": 15,
     "facts": [
-      "honey can stay edible for thousands of years when it is sealed properly.",
-      "in the 1830s, ketchup was sold in America as medicine."
+      "Leonardo da Vinci often wrote his notes in mirror writing.",
+      "Yuri Gagarin became the first human in space in 1961."
     ],
     "mode": "highlight"
   },
@@ -540,10 +541,10 @@
     "start": 116.5,
     "length": 30,
     "facts": [
-      "a mantis shrimp punches so fast that the water around its claw briefly boils.",
-      "footprints left on the Moon could last for millions of years.",
-      "Nintendo was founded in 1889, and it started out making playing cards.",
-      "crows can recognize individual human faces and remember them for years."
+      "mercury is a metal that stays liquid at room temperature.",
+      "the tallest known tree is a coast redwood named Hyperion.",
+      "the QWERTY keyboard was designed for typewriters in the 1870s.",
+      "an adult body holds about five liters of blood."
     ],
     "mode": "highlight"
   },
@@ -554,8 +555,8 @@
     "start": 564,
     "length": 15,
     "facts": [
-      "sunlight takes about eight minutes to reach Earth.",
-      "giraffes have seven neck bones, exactly the same number as humans."
+      "some turtles can breathe through their rear ends.",
+      "birds do not feel the burn of chili peppers."
     ],
     "mode": "highlight"
   },
@@ -566,11 +567,11 @@
     "start": 531,
     "length": 30,
     "facts": [
-      "octopuses have three hearts and blue blood.",
-      "one teaspoon of a neutron star would weigh billions of tons.",
-      "carrots were mostly purple and yellow before orange ones became popular.",
-      "the little dot on top of a lowercase i is called a tittle.",
-      "butterflies taste with their feet."
+      "jellyfish have no brain and no heart.",
+      "coffee beans are actually the seeds of a fruit.",
+      "lemons usually float in water, but limes usually sink.",
+      "the Statue of Liberty was a gift from France.",
+      "axolotls can regrow lost limbs."
     ],
     "mode": "random"
   },
@@ -581,8 +582,8 @@
     "start": 374.5,
     "length": 15,
     "facts": [
-      "the national animal of Scotland is the unicorn.",
-      "the little dot on top of a lowercase i is called a tittle."
+      "capybaras are the largest rodents in the world.",
+      "Vatican City is the smallest country in the world."
     ],
     "mode": "highlight"
   },
@@ -593,10 +594,10 @@
     "start": 162,
     "length": 30,
     "facts": [
-      "a lightning bolt is about five times hotter than the surface of the Sun.",
-      "sea otters often hold hands while sleeping so they do not drift apart.",
-      "Australia is wider than the Moon.",
-      "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid."
+      "the Wright brothers' first flight lasted just twelve seconds.",
+      "the Eiffel Tower was originally meant to be temporary.",
+      "chameleons can move each eye independently.",
+      "diamonds and pencil graphite are both made of carbon."
     ],
     "mode": "highlight"
   },
@@ -607,8 +608,8 @@
     "start": 337.5,
     "length": 15,
     "facts": [
-      "Saturn is so light for its size that it is less dense than water.",
-      "flamingos are pink because of the food they eat."
+      "about half of Earth's oxygen comes from the ocean.",
+      "Tetris was created in the Soviet Union in 1984."
     ],
     "mode": "highlight"
   },
@@ -619,10 +620,10 @@
     "start": 46.5,
     "length": 30,
     "facts": [
-      "Saturn is so light for its size that it is less dense than water.",
-      "a single pineapple can take around two years to grow.",
-      "tiny animals called tardigrades have survived exposure to the vacuum of space.",
-      "a day on Venus is longer than a year on Venus."
+      "the first text message ever sent said Merry Christmas.",
+      "Bluetooth is named after a Danish king, Harald Bluetooth.",
+      "the human brain is about sixty percent fat.",
+      "red blood cells live for about four months."
     ],
     "mode": "highlight"
   },
@@ -633,8 +634,8 @@
     "start": 224,
     "length": 15,
     "facts": [
-      "Saturn is so light for its size that it is less dense than water.",
-      "flamingos are pink because of the food they eat."
+      "Canada has the longest coastline in the world.",
+      "Africa has more countries than any other continent."
     ],
     "mode": "highlight"
   },
@@ -645,8 +646,8 @@
     "start": 73,
     "length": 15,
     "facts": [
-      "Saturn is so light for its size that it is less dense than water.",
-      "flamingos are pink because of the food they eat."
+      "Antarctica is the largest desert in the world.",
+      "Greenland is the largest island in the world."
     ],
     "mode": "random"
   },
@@ -657,11 +658,11 @@
     "start": 539,
     "length": 30,
     "facts": [
-      "sunlight takes about eight minutes to reach Earth.",
-      "giraffes have seven neck bones, exactly the same number as humans.",
-      "the computer that guided Apollo to the Moon had only about four kilobytes of memory.",
-      "bananas are botanically berries, but strawberries are not.",
-      "butterflies taste with their feet."
+      "Monaco is smaller than New York's Central Park.",
+      "the first computer mouse was made of wood.",
+      "the arcade game Pong came out in 1972.",
+      "chess is believed to have originated in India.",
+      "adult humans have 206 bones."
     ],
     "mode": "highlight"
   },
@@ -672,8 +673,8 @@
     "start": 409.5,
     "length": 15,
     "facts": [
-      "tiny animals called tardigrades have survived exposure to the vacuum of space.",
-      "a single pineapple can take around two years to grow."
+      "some snails have thousands of tiny teeth.",
+      "an elephant's pregnancy lasts nearly two years."
     ],
     "mode": "highlight"
   },
@@ -684,10 +685,10 @@
     "start": 398,
     "length": 30,
     "facts": [
-      "France covers more time zones than any other country, thanks to its overseas territories.",
-      "flamingos are pink because of the food they eat.",
-      "Pluto has not completed a single orbit of the Sun since it was discovered in 1930.",
-      "wombats are the only animals known to produce cube shaped poop."
+      "a woodpecker's tongue wraps around its skull.",
+      "babies are born with around 300 bones.",
+      "you blink thousands of times every day.",
+      "the Mona Lisa has no visible eyebrows."
     ],
     "mode": "highlight"
   },
@@ -698,8 +699,8 @@
     "start": 281,
     "length": 15,
     "facts": [
-      "tiny animals called tardigrades have survived exposure to the vacuum of space.",
-      "a single pineapple can take around two years to grow."
+      "the first email was sent in 1971.",
+      "the original Game Boy launched in 1989."
     ],
     "mode": "highlight"
   },
@@ -710,11 +711,11 @@
     "start": 148,
     "length": 30,
     "facts": [
-      "an average fluffy cumulus cloud weighs around five hundred tons.",
-      "the first home video game console, the Magnavox Odyssey, came out in 1972.",
-      "peanuts are not actually nuts. They are legumes, like beans and lentils.",
-      "sharks have existed longer than trees.",
-      "Australia is wider than the Moon."
+      "the first iPhone came out in 2007.",
+      "Amazon started out as an online bookstore.",
+      "a cow's stomach has four compartments.",
+      "horses can sleep while standing up.",
+      "cucumbers are about 96 percent water."
     ],
     "mode": "random"
   }
