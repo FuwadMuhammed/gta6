@@ -353,6 +353,18 @@
     "mode": "highlight"
   },
   {
+    "date": "2026-12-19-2030",
+    "status": "rendered",
+    "source": "gi5sORTrvjI-p003",
+    "start": 391.5,
+    "length": 15,
+    "facts": [
+      "a single pineapple can take around two years to grow.",
+      "tiny animals called tardigrades have survived exposure to the vacuum of space."
+    ],
+    "mode": "highlight"
+  },
+  {
     "date": "2026-12-20-2030",
     "status": "rendered",
     "source": "gi5sORTrvjI-p000",
@@ -536,6 +548,18 @@
     "mode": "highlight"
   },
   {
+    "date": "2027-01-03-2030",
+    "status": "rendered",
+    "source": "yQkb6x6IavY-p001",
+    "start": 2,
+    "length": 15,
+    "facts": [
+      "a single pineapple can take around two years to grow.",
+      "tiny animals called tardigrades have survived exposure to the vacuum of space."
+    ],
+    "mode": "highlight"
+  },
+  {
     "date": "2027-01-04-2030",
     "status": "rendered",
     "source": "cmbyetOax5k-p000",
@@ -573,6 +597,94 @@
       "sea otters often hold hands while sleeping so they do not drift apart.",
       "Australia is wider than the Moon.",
       "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid."
+    ],
+    "mode": "highlight"
+  },
+  {
+    "date": "2027-01-07-2030",
+    "status": "rendered",
+    "source": "gi5sORTrvjI-p010",
+    "start": 337.5,
+    "length": 15,
+    "facts": [
+      "Saturn is so light for its size that it is less dense than water.",
+      "flamingos are pink because of the food they eat."
+    ],
+    "mode": "highlight"
+  },
+  {
+    "date": "2027-01-08-2030",
+    "status": "rendered",
+    "source": "cmbyetOax5k-p001",
+    "start": 46.5,
+    "length": 30,
+    "facts": [
+      "Saturn is so light for its size that it is less dense than water.",
+      "a single pineapple can take around two years to grow.",
+      "tiny animals called tardigrades have survived exposure to the vacuum of space.",
+      "a day on Venus is longer than a year on Venus."
+    ],
+    "mode": "highlight"
+  },
+  {
+    "date": "2027-01-09-2030",
+    "status": "rendered",
+    "source": "cmbyetOax5k-p002",
+    "start": 224,
+    "length": 15,
+    "facts": [
+      "Saturn is so light for its size that it is less dense than water.",
+      "flamingos are pink because of the food they eat."
+    ],
+    "mode": "highlight"
+  },
+  {
+    "date": "2027-01-10-2030",
+    "status": "rendered",
+    "source": "cmbyetOax5k-p003",
+    "start": 73,
+    "length": 15,
+    "facts": [
+      "Saturn is so light for its size that it is less dense than water.",
+      "flamingos are pink because of the food they eat."
+    ],
+    "mode": "random"
+  },
+  {
+    "date": "2027-01-12-2030",
+    "status": "rendered",
+    "source": "cmbyetOax5k-p000",
+    "start": 409.5,
+    "length": 15,
+    "facts": [
+      "tiny animals called tardigrades have survived exposure to the vacuum of space.",
+      "a single pineapple can take around two years to grow."
+    ],
+    "mode": "highlight"
+  },
+  {
+    "date": "2027-01-13-2030",
+    "status": "rendered",
+    "source": "gi5sORTrvjI-p011",
+    "start": 398,
+    "length": 30,
+    "facts": [
+      "France covers more time zones than any other country, thanks to its overseas territories.",
+      "flamingos are pink because of the food they eat.",
+      "Pluto has not completed a single orbit of the Sun since it was discovered in 1930.",
+      "wombats are the only animals known to produce cube shaped poop."
+    ],
+    "mode": "highlight"
+  },
+  {
+    "date": "2027-01-14-2030",
+    "status": "rendered",
+    "source": "gi5sORTrvjI-p012",
+    "start": 281,
+    "length": 15,
+    "facts": [
+      "tiny animals called tardigrades have survived exposure to the vacuum of space.",
+      "a single pineapple can take around two years to grow."
     ],
     "mode": "highlight"
   }
