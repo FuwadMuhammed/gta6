@@ -1,0 +1,27 @@
+{
+  "title": "This plane flies straight into the sun in GTA 6.",
+  "hook": "FLYING INTO THE SUN",
+  "clipId": "gta-002",
+  "source": {
+    "id": "yQkb6x6IavY-p000",
+    "url": "https://www.youtube.com/watch?v=yQkb6x6IavY",
+    "credit": "GameOn Sonu"
+  },
+  "clip": {
+    "start": 404,
+    "length": 11.9,
+    "mode": "highlight",
+    "seed": 1817422009,
+    "zoom": 1.125
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "This plane flies straight into the sun in GTA 6. The whole screen washes out, then the sky opens back up over the water. Would you rather fly or drive?"
+    }
+  ],
+  "post": {
+    "caption": "This plane flies straight into the sun in GTA 6.\n\nGameplay Credit: GameOn Sonu (https://www.youtube.com/channel/UCJmz3YPam1y-qSqMG6FazXQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #Shorts",
+    "youtubeTitle": "This plane flies straight into the sun in GTA 6 #GTA6 #Shorts"
+  }
+}
