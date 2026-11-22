@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-11-22-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "cmbyetOax5k-p000",
     "start": 333,
     "length": 30,
@@ -16,7 +16,7 @@
   },
   {
     "date": "2026-11-23-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "cmbyetOax5k-p003",
     "start": 22,
     "length": 15,
@@ -28,7 +28,7 @@
   },
   {
     "date": "2026-11-24-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "cmbyetOax5k-p004",
     "start": 181.5,
     "length": 30,
