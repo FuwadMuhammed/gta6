@@ -145,7 +145,7 @@
   },
   {
     "date": "2026-12-03-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "yQkb6x6IavY-p000",
     "start": 493,
     "length": 30,
@@ -155,7 +155,8 @@
       "carrots were mostly purple and yellow before orange ones became popular.",
       "the little dot on top of a lowercase i is called a tittle."
     ],
-    "mode": "highlight"
+    "mode": "highlight",
+    "postAt": "2026-12-02T15:00:00.000Z"
   },
   {
     "date": "2026-12-04-2030",
