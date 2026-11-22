@@ -6,6 +6,7 @@
 //   npm run post -- <date> --at 2026-12-20T13:30:00Z --url https://...mp4
 //   npm run post -- <date> --draft                 save as Buffer drafts (never publishes)
 //   npm run post -- <date> --now                   post in about 5 minutes instead of at its slot time
+//   npm run post -- <date> --share-now             publish immediately (works when the Buffer queue is full)
 //   npm run post -- --channels                     list the Buffer channels for every BUFFER_API_KEY_*
 //   npm run post -- <date> --status                show each saved post's status
 //   npm run post -- <date> --delete                delete the saved posts (tests)
@@ -115,7 +116,7 @@ export function dueAtFor(date: string) {
   return new Date(Math.max(at, Date.now() + 10 * 60e3)).toISOString()
 }
 
-export async function post(date: string, opts: { only?: string, at?: string, url?: string, dry?: boolean, draft?: boolean } = {}) {
+export async function post(date: string, opts: { only?: string, at?: string, url?: string, dry?: boolean, draft?: boolean, shareNow?: boolean } = {}) {
   loadEnv()
   const cfg: Config = JSON.parse(readFileSync(join(ROOT, 'brand/channels.json'), 'utf8'))
   const reel: Reel = JSON.parse(readFileSync(join(ROOT, 'reels', `${date}.json`), 'utf8'))
@@ -138,7 +139,11 @@ export async function post(date: string, opts: { only?: string, at?: string, url
         console.log(`  ${job.key}: already scheduled (${saved[job.key].id})`)
         continue
       }
-      const input = opts.draft ? { ...job.input, saveToDraft: true } : job.input
+      let input = opts.draft ? { ...job.input, saveToDraft: true } : job.input
+      if (opts.shareNow) {
+        const { dueAt: _unused, ...rest } = input
+        input = { ...rest, mode: 'shareNow' }
+      }
       if (opts.dry) {
         console.log(`  ${job.key} (${ch.key}):\n${JSON.stringify(input, null, 2).replace(/^/gm, '    ')}`)
         continue
@@ -257,7 +262,7 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   else {
     // --now: a few minutes from now (Buffer needs a time in the future).
     const at = args.includes('--now') ? new Date(Date.now() + 5 * 60e3).toISOString() : opt('--at')
-    const r = await post(date, { only: opt('--only'), at, url: opt('--url'), dry: args.includes('--dry'), draft: args.includes('--draft') })
+    const r = await post(date, { only: opt('--only'), at, url: opt('--url'), dry: args.includes('--dry'), draft: args.includes('--draft'), shareNow: args.includes('--share-now') })
     if (r.failures.length) {
       console.error(`✗ ${r.failures.length} channel(s) failed:\n  ${r.failures.join('\n  ')}`)
       process.exit(1)
