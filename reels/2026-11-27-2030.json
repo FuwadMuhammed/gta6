@@ -1,0 +1,28 @@
+{
+  "title": "Bananas are botanically berries, but strawberries are not.",
+  "source": {
+    "id": "cmbyetOax5k-p002",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 559,
+    "length": 15,
+    "mode": "highlight",
+    "seed": 2379329466
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: bananas are botanically berries, but strawberries are not."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, wombats are the only animals known to produce cube shaped poop."
+    }
+  ],
+  "post": {
+    "caption": "Bananas are botanically berries, but strawberries are not.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "GTA 6 clip + did you know? Bananas are botanically berries, but strawberries are not. #Shorts"
+  }
+}

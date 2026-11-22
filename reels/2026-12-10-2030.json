@@ -1,0 +1,36 @@
+{
+  "title": "Giraffes have seven neck bones, exactly the same number as humans.",
+  "source": {
+    "id": "gi5sORTrvjI-p010",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 543.5,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 3778934561
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: giraffes have seven neck bones, exactly the same number as humans."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the computer that guided Apollo to the Moon had only about four kilobytes of memory."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, Pluto has not completed a single orbit of the Sun since it was discovered in 1930."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, flamingos are pink because of the food they eat."
+    }
+  ],
+  "post": {
+    "caption": "Giraffes have seven neck bones, exactly the same number as humans.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "GTA 6 clip + did you know? Giraffes have seven neck bones, exactly the same number as human #Shorts"
+  }
+}

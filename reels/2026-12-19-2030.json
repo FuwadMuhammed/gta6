@@ -1,0 +1,28 @@
+{
+  "title": "A lightning bolt is about five times hotter than the surface of the Sun.",
+  "source": {
+    "id": "yQkb6x6IavY-p001",
+    "url": "https://www.youtube.com/watch?v=yQkb6x6IavY",
+    "credit": "GameOn Sonu"
+  },
+  "clip": {
+    "start": 2,
+    "length": 15,
+    "mode": "highlight",
+    "seed": 4036596920
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: a lightning bolt is about five times hotter than the surface of the Sun."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, octopuses have three hearts and blue blood."
+    }
+  ],
+  "post": {
+    "caption": "A lightning bolt is about five times hotter than the surface of the Sun.\n\nGameplay Credit: GameOn Sonu (https://www.youtube.com/channel/UCJmz3YPam1y-qSqMG6FazXQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "GTA 6 clip + did you know? A lightning bolt is about five times hotter than the surface of  #Shorts"
+  }
+}

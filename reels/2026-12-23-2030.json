@@ -1,0 +1,36 @@
+{
+  "title": "Bananas are botanically berries, but strawberries are not.",
+  "source": {
+    "id": "gi5sORTrvjI-p013",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 427,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 457358399
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: bananas are botanically berries, but strawberries are not."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, a lightning bolt is about five times hotter than the surface of the Sun."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, in the 1830s, ketchup was sold in America as medicine."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the computer that guided Apollo to the Moon had only about four kilobytes of memory."
+    }
+  ],
+  "post": {
+    "caption": "Bananas are botanically berries, but strawberries are not.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "GTA 6 clip + did you know? Bananas are botanically berries, but strawberries are not. #Shorts"
+  }
+}
