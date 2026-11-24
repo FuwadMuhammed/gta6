@@ -160,7 +160,7 @@
   },
   {
     "date": "2026-12-04-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "yQkb6x6IavY-p001",
     "start": 2,
     "length": 15,
@@ -168,7 +168,8 @@
       "moonlight takes just over one second to reach Earth.",
       "a day on Venus is longer than a year on Venus."
     ],
-    "mode": "highlight"
+    "mode": "highlight",
+    "postAt": "2026-12-03T15:00:00.000Z"
   },
   {
     "date": "2026-12-05-2030",
