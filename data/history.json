@@ -173,7 +173,7 @@
   },
   {
     "date": "2026-12-05-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "cmbyetOax5k-p000",
     "start": 377,
     "length": 30,
@@ -184,7 +184,8 @@
       "your left lung is smaller than your right to make room for your heart.",
       "sunsets on Mars appear blue."
     ],
-    "mode": "highlight"
+    "mode": "highlight",
+    "postAt": "2026-12-04T15:00:00.000Z"
   },
   {
     "date": "2026-12-06-2030",
