@@ -1,0 +1,27 @@
+{
+  "title": "Look how far you can see from this plane in GTA 6.",
+  "hook": "LOOK HOW FAR YOU CAN SEE",
+  "clipId": "gta-003",
+  "source": {
+    "id": "yQkb6x6IavY-p000",
+    "url": "https://www.youtube.com/watch?v=yQkb6x6IavY",
+    "credit": "GameOn Sonu"
+  },
+  "clip": {
+    "start": 373,
+    "length": 11.6,
+    "mode": "highlight",
+    "seed": 1846051160,
+    "zoom": 1.125
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Look how far you can see from this plane in GTA 6. Islands, open water, and huge clouds, all the way to the horizon. Where would you land first?"
+    }
+  ],
+  "post": {
+    "caption": "Look how far you can see from this plane in GTA 6.\n\nGameplay Credit: GameOn Sonu (https://www.youtube.com/channel/UCJmz3YPam1y-qSqMG6FazXQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #Shorts",
+    "youtubeTitle": "Look how far you can see from this plane in GTA 6 #GTA6 #Shorts"
+  }
+}

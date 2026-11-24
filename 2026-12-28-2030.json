@@ -1,0 +1,28 @@
+{
+  "title": "Almonds are seeds from a close relative of the peach.",
+  "source": {
+    "id": "cmbyetOax5k-p003",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 58,
+    "length": 15,
+    "mode": "random",
+    "seed": 600504154
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: almonds are seeds from a close relative of the peach."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, platypuses are mammals that lay eggs."
+    }
+  ],
+  "post": {
+    "caption": "Almonds are seeds from a close relative of the peach.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Almonds are seeds from a close relative of the peach. #GTA6 #Shorts"
+  }
+}

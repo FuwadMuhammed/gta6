@@ -1,0 +1,36 @@
+{
+  "title": "The first YouTube video, Me at the Zoo, was uploaded in 2005.",
+  "source": {
+    "id": "yQkb6x6IavY-p000",
+    "url": "https://www.youtube.com/watch?v=yQkb6x6IavY",
+    "credit": "GameOn Sonu"
+  },
+  "clip": {
+    "start": 19,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 4007967769
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: the first YouTube video, Me at the Zoo, was uploaded in 2005."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, an ostrich's eye is bigger than its brain."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the first modern Olympic Games were held in Athens in 1896."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the PlayStation grew out of a canceled partnership between Sony and Nintendo."
+    }
+  ],
+  "post": {
+    "caption": "The first YouTube video, Me at the Zoo, was uploaded in 2005.\n\nGameplay Credit: GameOn Sonu (https://www.youtube.com/channel/UCJmz3YPam1y-qSqMG6FazXQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? The first YouTube video, Me at the Zoo, was uploaded in 2005. #GTA6 #Shorts"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "The Wright brothers' first flight lasted just twelve seconds.",
+  "source": {
+    "id": "gi5sORTrvjI-p007",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 162,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 901289177
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: the Wright brothers' first flight lasted just twelve seconds."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the Eiffel Tower was originally meant to be temporary."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, chameleons can move each eye independently."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, diamonds and pencil graphite are both made of carbon."
+    }
+  ],
+  "post": {
+    "caption": "The Wright brothers' first flight lasted just twelve seconds.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? The Wright brothers' first flight lasted just twelve seconds. #GTA6 #Shorts"
+  }
+}

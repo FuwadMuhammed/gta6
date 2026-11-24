@@ -1,0 +1,28 @@
+{
+  "title": "A dog named Laika was the first animal to orbit Earth.",
+  "source": {
+    "id": "gi5sORTrvjI-p000",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 43.5,
+    "length": 15,
+    "mode": "highlight",
+    "seed": 371470946
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: a dog named Laika was the first animal to orbit Earth."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, polar bears have black skin under their fur."
+    }
+  ],
+  "post": {
+    "caption": "A dog named Laika was the first animal to orbit Earth.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? A dog named Laika was the first animal to orbit Earth. #GTA6 #Shorts"
+  }
+}

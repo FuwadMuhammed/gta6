@@ -1,0 +1,28 @@
+{
+  "title": "The femur is the longest bone in the human body.",
+  "source": {
+    "id": "gi5sORTrvjI-p001",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 334,
+    "length": 15,
+    "mode": "highlight",
+    "seed": 543245852
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: the femur is the longest bone in the human body."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, crows can recognize individual human faces and remember them for years."
+    }
+  ],
+  "post": {
+    "caption": "The femur is the longest bone in the human body.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? The femur is the longest bone in the human body. #GTA6 #Shorts"
+  }
+}

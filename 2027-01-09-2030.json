@@ -1,0 +1,28 @@
+{
+  "title": "Canada has the longest coastline in the world.",
+  "source": {
+    "id": "cmbyetOax5k-p002",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 224,
+    "length": 15,
+    "mode": "highlight",
+    "seed": 987176630
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: Canada has the longest coastline in the world."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, Africa has more countries than any other continent."
+    }
+  ],
+  "post": {
+    "caption": "Canada has the longest coastline in the world.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Canada has the longest coastline in the world. #GTA6 #Shorts"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Monaco is smaller than New York's Central Park.",
+  "source": {
+    "id": "gi5sORTrvjI-p000",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 539,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 1645647103
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: Monaco is smaller than New York's Central Park."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the first computer mouse was made of wood."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the arcade game Pong came out in 1972."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, chess is believed to have originated in India."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, adult humans have 206 bones."
+    }
+  ],
+  "post": {
+    "caption": "Monaco is smaller than New York's Central Park.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Monaco is smaller than New York's Central Park. #GTA6 #Shorts"
+  }
+}

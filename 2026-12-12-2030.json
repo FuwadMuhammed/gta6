@@ -1,0 +1,36 @@
+{
+  "title": "The Pacific Ocean is larger than all of Earth's land combined.",
+  "source": {
+    "id": "cmbyetOax5k-p002",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 18.5,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 3836192863
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: the Pacific Ocean is larger than all of Earth's land combined."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the Mariana Trench is the deepest known part of the ocean."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the Great Wall of China is over twenty thousand kilometers long in total."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the national animal of Scotland is the unicorn."
+    }
+  ],
+  "post": {
+    "caption": "The Pacific Ocean is larger than all of Earth's land combined.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? The Pacific Ocean is larger than all of Earth's land combined. #GTA6 #Shorts"
+  }
+}

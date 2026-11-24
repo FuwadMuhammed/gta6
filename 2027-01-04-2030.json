@@ -1,0 +1,40 @@
+{
+  "title": "Jellyfish have no brain and no heart.",
+  "source": {
+    "id": "cmbyetOax5k-p000",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 531,
+    "length": 30,
+    "mode": "random",
+    "seed": 844030875
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: jellyfish have no brain and no heart."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, coffee beans are actually the seeds of a fruit."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, lemons usually float in water, but limes usually sink."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the Statue of Liberty was a gift from France."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, axolotls can regrow lost limbs."
+    }
+  ],
+  "post": {
+    "caption": "Jellyfish have no brain and no heart.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Jellyfish have no brain and no heart. #GTA6 #Shorts"
+  }
+}

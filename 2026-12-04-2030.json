@@ -1,0 +1,28 @@
+{
+  "title": "Moonlight takes just over one second to reach Earth.",
+  "source": {
+    "id": "yQkb6x6IavY-p001",
+    "url": "https://www.youtube.com/watch?v=yQkb6x6IavY",
+    "credit": "GameOn Sonu"
+  },
+  "clip": {
+    "start": 2,
+    "length": 15,
+    "mode": "highlight",
+    "seed": 3005947484
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: moonlight takes just over one second to reach Earth."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, a day on Venus is longer than a year on Venus."
+    }
+  ],
+  "post": {
+    "caption": "Moonlight takes just over one second to reach Earth.\n\nGameplay Credit: GameOn Sonu (https://www.youtube.com/channel/UCJmz3YPam1y-qSqMG6FazXQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Moonlight takes just over one second to reach Earth. #GTA6 #Shorts"
+  }
+}

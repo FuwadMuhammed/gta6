@@ -1,0 +1,28 @@
+{
+  "title": "Antarctica is the largest desert in the world.",
+  "source": {
+    "id": "cmbyetOax5k-p003",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 73,
+    "length": 15,
+    "mode": "random",
+    "seed": 1617017952
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: Antarctica is the largest desert in the world."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, Greenland is the largest island in the world."
+    }
+  ],
+  "post": {
+    "caption": "Antarctica is the largest desert in the world.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Antarctica is the largest desert in the world. #GTA6 #Shorts"
+  }
+}

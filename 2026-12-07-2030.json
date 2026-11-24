@@ -1,0 +1,36 @@
+{
+  "title": "The blue whale is the largest animal known to have ever lived.",
+  "source": {
+    "id": "gi5sORTrvjI-p007",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 90,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 3091834937
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: the blue whale is the largest animal known to have ever lived."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, a mantis shrimp punches so fast that the water around its claw briefly boils."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, a group of owls is called a parliament."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, one teaspoon of a neutron star would weigh billions of tons."
+    }
+  ],
+  "post": {
+    "caption": "The blue whale is the largest animal known to have ever lived.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? The blue whale is the largest animal known to have ever lived. #GTA6 #Shorts"
+  }
+}

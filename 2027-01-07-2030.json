@@ -1,0 +1,28 @@
+{
+  "title": "About half of Earth's oxygen comes from the ocean.",
+  "source": {
+    "id": "gi5sORTrvjI-p010",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 337.5,
+    "length": 15,
+    "mode": "highlight",
+    "seed": 929918328
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: about half of Earth's oxygen comes from the ocean."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, Tetris was created in the Soviet Union in 1984."
+    }
+  ],
+  "post": {
+    "caption": "About half of Earth's oxygen comes from the ocean.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? About half of Earth's oxygen comes from the ocean. #GTA6 #Shorts"
+  }
+}

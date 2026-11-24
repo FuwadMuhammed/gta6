@@ -1,0 +1,40 @@
+{
+  "title": "The first iPhone came out in 2007.",
+  "source": {
+    "id": "cmbyetOax5k-p004",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 148,
+    "length": 30,
+    "mode": "random",
+    "seed": 1760163707
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: the first iPhone came out in 2007."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, Amazon started out as an online bookstore."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, a cow's stomach has four compartments."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, horses can sleep while standing up."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, cucumbers are about 96 percent water."
+    }
+  ],
+  "post": {
+    "caption": "The first iPhone came out in 2007.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? The first iPhone came out in 2007. #GTA6 #Shorts"
+  }
+}

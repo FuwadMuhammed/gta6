@@ -1,0 +1,40 @@
+{
+  "title": "Sound travels about four times faster in water than in air.",
+  "source": {
+    "id": "cmbyetOax5k-p001",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 524,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 400100097
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: sound travels about four times faster in water than in air."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, every zebra has its own unique stripe pattern."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, some bamboo can grow almost a meter in a single day."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the Milky Way contains at least one hundred billion stars."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, kangaroos cannot easily walk backward."
+    }
+  ],
+  "post": {
+    "caption": "Sound travels about four times faster in water than in air.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Sound travels about four times faster in water than in air. #GTA6 #Shorts"
+  }
+}

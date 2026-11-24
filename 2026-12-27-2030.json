@@ -1,0 +1,36 @@
+{
+  "title": "Tooth enamel is the hardest substance in the human body.",
+  "source": {
+    "id": "gi5sORTrvjI-p002",
+    "url": "https://www.youtube.com/watch?v=gi5sORTrvjI",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 26.5,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 571875003
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: tooth enamel is the hardest substance in the human body."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, your heart beats around one hundred thousand times each day."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, tigers have striped skin as well as striped fur."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, cashews grow attached to a fruit called the cashew apple."
+    }
+  ],
+  "post": {
+    "caption": "Tooth enamel is the hardest substance in the human body.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Tooth enamel is the hardest substance in the human body. #GTA6 #Shorts"
+  }
+}

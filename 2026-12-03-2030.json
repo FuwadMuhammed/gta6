@@ -1,0 +1,36 @@
+{
+  "title": "A group of flamingos is called a flamboyance.",
+  "source": {
+    "id": "yQkb6x6IavY-p000",
+    "url": "https://www.youtube.com/watch?v=yQkb6x6IavY",
+    "credit": "GameOn Sonu"
+  },
+  "clip": {
+    "start": 493,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 2977318333
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: a group of flamingos is called a flamboyance."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, Ganymede, a moon of Jupiter, is larger than the planet Mercury."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, carrots were mostly purple and yellow before orange ones became popular."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the little dot on top of a lowercase i is called a tittle."
+    }
+  ],
+  "post": {
+    "caption": "A group of flamingos is called a flamboyance.\n\nGameplay Credit: GameOn Sonu (https://www.youtube.com/channel/UCJmz3YPam1y-qSqMG6FazXQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? A group of flamingos is called a flamboyance. #GTA6 #Shorts"
+  }
+}

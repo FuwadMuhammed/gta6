@@ -1,0 +1,36 @@
+{
+  "title": "Mercury is a metal that stays liquid at room temperature.",
+  "source": {
+    "id": "yQkb6x6IavY-p000",
+    "url": "https://www.youtube.com/watch?v=yQkb6x6IavY",
+    "credit": "GameOn Sonu"
+  },
+  "clip": {
+    "start": 116.5,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 786772573
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: mercury is a metal that stays liquid at room temperature."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the tallest known tree is a coast redwood named Hyperion."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the QWERTY keyboard was designed for typewriters in the 1870s."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, an adult body holds about five liters of blood."
+    }
+  ],
+  "post": {
+    "caption": "Mercury is a metal that stays liquid at room temperature.\n\nGameplay Credit: GameOn Sonu (https://www.youtube.com/channel/UCJmz3YPam1y-qSqMG6FazXQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Mercury is a metal that stays liquid at room temperature. #GTA6 #Shorts"
+  }
+}

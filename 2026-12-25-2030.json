@@ -1,0 +1,36 @@
+{
+  "title": "Hippos produce a reddish oily fluid that works like sunscreen.",
+  "source": {
+    "id": "cmbyetOax5k-p000",
+    "url": "https://www.youtube.com/watch?v=cmbyetOax5k",
+    "credit": "PressStartPlay"
+  },
+  "clip": {
+    "start": 454,
+    "length": 30,
+    "mode": "highlight",
+    "seed": 514616701
+  },
+  "scenes": [
+    {
+      "type": "fact",
+      "voice": "Fun fact: hippos produce a reddish oily fluid that works like sunscreen."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, electric eels can produce shocks of more than 800 volts."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, fireflies make light through a chemical reaction in their bodies."
+    },
+    {
+      "type": "fact",
+      "voice": "Also, the smallest bone in your body is inside your ear."
+    }
+  ],
+  "post": {
+    "caption": "Hippos produce a reddish oily fluid that works like sunscreen.\n\nGameplay Credit: PressStartPlay (https://www.youtube.com/channel/UCpLyM_DmzSO3mbZEDI99OSQ)\nFan page. Not affiliated with or endorsed by Rockstar Games.\n\n#GTA6 #GTAVI #Gaming #FunFact #Shorts",
+    "youtubeTitle": "Did you know? Hippos produce a reddish oily fluid that works like sunscreen. #GTA6 #Shorts"
+  }
+}
