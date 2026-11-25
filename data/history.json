@@ -189,7 +189,7 @@
   },
   {
     "date": "2026-12-06-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "gi5sORTrvjI-p006",
     "start": 438.5,
     "length": 15,
@@ -197,7 +197,8 @@
       "emperor penguin dads balance eggs on their feet to keep them warm.",
       "a group of crows is called a murder."
     ],
-    "mode": "highlight"
+    "mode": "highlight",
+    "postAt": "2026-12-05T15:00:00.000Z"
   },
   {
     "date": "2026-12-07-2030",
