@@ -217,7 +217,7 @@
   },
   {
     "date": "2026-12-08-2030",
-    "status": "rendered",
+    "status": "posted",
     "source": "gi5sORTrvjI-p008",
     "start": 500,
     "length": 15,
@@ -225,7 +225,8 @@
       "geckos can walk on glass using tiny hairs on their toes.",
       "Earth is closest to the Sun in early January."
     ],
-    "mode": "highlight"
+    "mode": "highlight",
+    "postAt": "2026-12-07T15:00:00.000Z"
   },
   {
     "date": "2026-12-09-2030",
